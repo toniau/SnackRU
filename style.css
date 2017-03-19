@@ -1,0 +1,183 @@
+body {
+    font-family: 'Varela Round', sans-serif;
+    color:  #4bcf7e;
+    width: 100%;
+    height: 100%;
+}
+
+#navbar{
+    background-color: #4bcf7e;
+}
+
+#navbar a{
+    text-decoration: none;
+    color: white;
+}
+
+#navbar a:link, #navbar a:visited{
+    padding: 16px 25px;
+    text-align: center; 
+    text-decoration: none;
+    display: inline-block;   
+}
+
+#navbar a:hover, #navbar a:active {
+    background-color: white;
+    color: #4bcf7e;
+}
+
+#snack-dash {
+    display: block;
+}
+
+#fundraiser {
+    display: none;
+    padding-left: 30px;
+    padding-right: 30px;
+}
+
+.tab-header{
+    padding-top: 60px;
+    padding-left: 30px;
+    padding-bottom: 50px;
+}
+
+.card {
+    background-color: #f9f9f9;
+    border: 3px solid #4bcf7e;
+    box-shadow: 8px 8px 5px #f1f1f1;
+    padding: 30px;
+}
+
+/* --- CALORIE GUAGE */
+
+#calorie-guage{
+    float: left;
+    margin-left: 70px;
+}
+
+#calorie-guage h3 {
+    text-align: center;
+}
+
+.guage-holder {
+  width: 220px;
+  margin: 50px auto 0;
+  position: relative;
+  text-align: center;
+}
+
+.circle-mask {
+  width: 220px;
+  height: 106px;
+  padding: 5px 10px 0;
+  border-bottom: 1px solid #ccc;
+  position: relative;
+  text-align: center;
+  overflow: hidden;
+}
+
+.circle, .circle-inner {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  border: 10px solid #ccc;
+  position: relative;
+}
+
+.circle-inner {
+  position: absolute;
+  top: -10px;
+  left: -10px;
+  border: 10px solid transparent;
+  border-bottom: 10px solid #ec567b;
+  border-left: 10px solid #ec567b;
+  transition: .3s ease-in-out;
+  transform: rotate(-45deg);
+}
+
+.circle-inner:after {
+  content: "";
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: white;
+  border: 4px solid #ec567b;
+  left: 14px;
+  top: 14px;
+}
+
+.percentage {
+  margin: 20px 0;
+  font-weight: bold;
+  color: #ed557b;
+  font-size: 15px;
+}
+
+.text-box {
+  width: 60px;
+  height: 30px;
+  text-align: center;
+  padding: 0 10px;
+  font-size: 15px;
+  color: #666;
+}
+
+.gauge-copy {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  position: absolute;
+  background: #4bcf7e;
+  top: 50%;
+  left: 50%;
+  transition: .3s ease-in-out;
+  transform: translate(-50%, -50%) rotate(0deg);
+  margin: 8px 0 0;
+}
+
+.gauge-copy:after {
+  content: "";
+  position: absolute;
+  width: 22px;
+  height: 22px;
+  border-radius: 50%;
+  background: #fff;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+}
+
+.gauge-copy:before {
+  content: "";
+  position: absolute;
+  border: 7px solid transparent;
+  border-right: 70px solid #4bcf7e;
+  left: -75px;
+  top: 8px;
+  /*transform: translate(-50%, -98%);*/
+  width: 0;
+  height: 0;
+}
+
+/* 1.8deg = 1% */
+
+/* -- MEAL TRACKER CARD */
+#meal-tracker {
+    position: absolute;
+    margin-left: 490px;
+    width: 700px;
+    height: 400px;
+}
+
+/* -- FORM ORDER */
+#form-container {
+    width: 300px;
+    height: 100%;
+    padding-left: 40px;
+}
+
+#order {
+    padding-left: 20px;
+}

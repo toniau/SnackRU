@@ -1,0 +1,112 @@
+<!DOCTYPE HTML>
+
+<html>
+    
+	<head>
+		<title>Hacking Snacks!</title>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="initial-scale=1.0">
+        
+        <!-- CSS -->
+        <link href="https://fonts.googleapis.com/css?family=Varela+Round" rel="stylesheet">
+        <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+        <link rel="stylesheet" type="text/css" href="./style.css">
+        <link rel="stylesheet" type="text/css" href="http://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
+        
+        <!-- JS -->
+        <script src="https://code.jquery.com/jquery-3.2.0.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.5.0/Chart.bundle.min.js"></script>
+        <script src="./controller.js"></script>
+	</head>
+
+	<body>
+        
+        <div id="navbar">
+            <div id="nav-links">
+                <a href="#">Logo</a>
+                <a href="#" id="dashTab">Snacker Dashboard</a>
+                <a href="#" id="fundraiserTab">Fundraiser</a>
+                <!--<a href="#" id="user">Hacker Name<i class="ion-ios-person-outline" id="user-icon"></i></a>-->
+            </div>
+        </div>
+        
+        <div id="snack-dash">
+            <h1 class="tab-header">Hello, welcome to your snacker dashboard, _____ (grab name here) !</h1>
+            
+            <!-- http://codepen.io/kh-mamun/pen/OpJKXR -->
+            <!-- Not functional yet, need to talk to QRU to implement javascript for this -->
+            <!-- Basically, every page refresh, go to database and grab hacker's list of snacks -->
+            <!-- Do calorie computation on this end -->
+            <!-- Unless we want to opt for local storage after first fetch -->
+            <div id="calorie-guage" class="card">
+                <h3>Calorie Intake</h3>
+                  <div class="guage-holder">    
+                    <div class="circle-mask">
+                      <div class="circle">
+                        <div class="circle-inner"></div> 
+                      </div>
+                    </div>
+                    <div class="percentage">0 %</div>
+                    <input type="text" class="text-box" />
+                    <div class="gauge-copy"></div>
+                  </div>
+            </div>
+            
+            <div id="meal-tracker" class="card">
+                <h3>Meal Tracker</h3>
+                <canvas id="myChart" height="130px;"></canvas>
+            </div>
+            
+        </div>
+
+        <div id="fundraiser">
+            <h1 class="tab-header">Happy Spring! SnackRU's Easter Fundraiser, <span style="color:black;"> ORDER HERE </style></span> <i class="ion-code-download"></i></h1>
+            
+            <div id="form-container">
+                <form id="order">
+                    <div class="form-group">
+                        <label for="firstname">First Name</label>
+                        <input type="text" class="form-control" id="firstname" placeholder="Jane">
+                    </div>
+                    <div class="form-group">
+                        <label for="lastname">Last Name</label>
+                        <input type="text" class="form-control" id="lastname" placeholder="Doe">
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email address</label>
+                        <input type="email" class="form-control" id="email" placeholder="JaneDoe@hackru.org">
+                    </div>
+                    <label>Cookie Flavors</label>
+                    <div class="radio">
+                        <label>
+                        <input type="radio" name="cookieOpt" id="vanilla" value="vanilla" checked> Vanilla
+                        </label>
+                    </div>
+                    <div class="radio">
+                      <label>
+                        <input type="radio" name="cookieOpt" id="chocolate" value="chocolate"> Chocoalte
+                      </label>
+                    </div>
+                    <div class="radio">
+                      <label>
+                        <input type="radio" name="cookieOpt" id="mint" value="mint"> Mint
+                      </label>
+                    </div>
+                    <div class="form-group">
+                        <label for="quantity">Quantity</label>
+                        <input type="number" class="form-control col-sm-2" id="quantity">
+                    </div>
+                    <br><br>
+                    <div class="form-group">
+                        <label class="checkbox-inline"> <input type="checkbox" id="mystery" value="mystery"> <strong>Mystery Egg ($5)</strong></label>
+                    </div>
+                    <br>
+                    <button type="submit" class="btn btn-default">Submit</button>
+                </form>
+            </div>
+        </div>
+        
+	</body>
+    
+</html>
