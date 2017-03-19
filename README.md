@@ -1,0 +1,2 @@
+# SnackRU
+HackRU Food Tech
