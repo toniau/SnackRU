@@ -168,7 +168,13 @@ body {
     position: absolute;
     margin-left: 490px;
     width: 700px;
-    height: 400px;
+    height: 450px;
+}
+
+#menu {
+    cursor: pointer;
+    font-size: 1em;
+    text-decoration: none;
 }
 
 /* -- FORM ORDER */
