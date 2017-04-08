@@ -54,6 +54,93 @@ $(document).ready(function(){
     
 });
 
+var scaleSettings = {
+    startValue: -50,
+    endValue: 50,
+    majorTick: {
+        color: 'black',
+        tickInterval: 10
+    },
+    minorTick: {
+        visible: true,
+        color: 'black',
+        tickInterval: 1
+    }
+};
+
+var rangesArray =  [{
+    startValue: -50,
+    endValue: 0,
+    color: 'blue'
+}, {
+    startValue: 0,
+    endValue: 50,
+    color: 'red'
+}];
+
+$(function () {
+    $("#gaugeContainer").dxCircularGauge({
+        scale: scaleSettings,
+        value: 24,
+        valueIndicator: { color: 'red', spindleGapSize: 5 },
+        subvalues: [19],
+        subvalueIndicator: { color: 'green' },
+        rangeContainer: {
+            ranges: rangesArray,
+            offset: 5
+        }
+    });
+
+    $("#linearGaugeContainer").dxLinearGauge({
+        geometry: {
+            orientation: 'vertical'
+        },
+        scale: scaleSettings,
+        value: 24,
+        valueIndicator: { color: 'red', offset: 10 },
+        subvalues: [19],
+        subvalueIndicator: { color: 'green', offset: -5 },
+        rangeContainer: {
+            ranges: rangesArray,
+            offset: -5
+        }
+    });
+
+    $("#barGaugeContainer").dxBarGauge({
+        startValue: -50,
+        endValue: 50,
+        label: {
+            format: 'decimal',
+            customizeText: function () {
+                return this.valueText + '&deg;C'
+            }
+        },
+        palette: 'Bright',
+        tooltip: {
+            enabled: true,
+            format: 'decimal',
+            customizeText: function () {
+                var cityName;
+                switch (this.index) {
+                    case 0: cityName = 'London'
+                        break;
+                    case 1: cityName = 'Berlin'
+                        break;
+                    case 2: cityName = 'New York'
+                        break;
+                    case 3: cityName = 'Moscow'
+                        break;
+                    case 4: cityName = 'Bangkok'
+                        break;
+                    default: cityName = undefined
+                        break;
+                }
+                return cityName + ': ' + this.valueText + '&deg;C';
+            }
+        }
+    });
+});
+
 $(function(){
   $('.text-box').keyup(function(){
     if ($('.text-box').val() == '') {
@@ -64,16 +151,16 @@ $(function(){
         'transform' : 'translate(-50%, -50%) rotate(0deg)'
       });
       $('.percentage').text('0 %');
-    } else if($('.text-box').val() >= 0 && $('.text-box').val() <= 100) {
-      var dVal = $(this).val();
-      var newVal = dVal * 1.8 - 45;
-      $('.circle-inner, .gauge-copy').css({
-        'transform' : 'rotate(' + newVal + 'deg)' 
-      });
-      $('.gauge-copy').css({
-        'transform' : 'translate(-50%, -50%) rotate(' + dVal * 1.8 + 'deg)'
-      });
-      $('.percentage').text(dVal + ' %');
+    } else if($('.text-box').val() >= 0 && $('.text-box').val() <= 2000) {
+          var dVal = $(this).val();
+          var newVal = dVal * 1.8 - 45;
+          $('.circle-inner, .gauge-copy').css({
+            'transform' : 'rotate(' + newVal + 'deg)' 
+          });
+          $('.gauge-copy').css({
+            'transform' : 'translate(-50%, -50%) rotate(' + dVal * 1.8 + 'deg)'
+          });
+          $('.percentage').text(dVal + ' %');
     } else {
       $('.percentage').text('Invalid input value');
     }

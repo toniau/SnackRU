@@ -26,6 +26,11 @@ body {
     color: #4bcf7e;
 }
 
+#logo {
+    height: 30px;
+    width: 30px;
+}
+
 #snack-dash {
     display: block;
 }
