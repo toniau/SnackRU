@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 html, body {
+=======
+body {
+>>>>>>> 4e2db55ba8ef22d8606d78cb97f997a7066aacb6
     font-family: 'Circular', sans-serif;
     color:  #4bcf7e;
     margin: 0;
@@ -13,6 +17,7 @@ h1 {
 }
 
 .container {
+<<<<<<< HEAD
     max-width: 115rem;
   height: 100%;
   background: #F9F9F9;
@@ -38,6 +43,32 @@ nav ul li {
   list-style-type: none;
 }
 
+=======
+  max-width: 115rem;
+  background: #F9F9F9;
+  border: 1px solid #E5E5E5;
+}
+
+nav {
+  background-color: #4bcf7e;
+  margin: 0;
+  max-width: 115rem;
+  margin: 0 auto;
+  overflow: hidden;
+}
+
+nav ul {
+  margin: 0;
+  padding: 0;
+  display: flex;
+}
+
+nav ul li {
+  display: inline-block;
+  list-style-type: none;
+}
+
+>>>>>>> 4e2db55ba8ef22d8606d78cb97f997a7066aacb6
 nav ul li a {
   color: white;
 }
@@ -56,6 +87,11 @@ nav ul li a:link, nav ul li a:visited{
 nav ul li a:hover, nav ul li a:active {
     background-color: white;
     color: #4bcf7e;
+}
+
+#logo {
+    height: 30px;
+    width: 30px;
 }
 
 #snack-dash {
