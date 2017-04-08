@@ -1,27 +1,58 @@
 body {
-    font-family: 'Varela Round', sans-serif;
+    font-family: 'Circular', sans-serif;
     color:  #4bcf7e;
+    margin: 0;
+    padding: 0;
     width: 100%;
     height: 100%;
 }
 
-#navbar{
-    background-color: #4bcf7e;
+h1 {
+  font-size: 32px;
+  font-weight: 100;
 }
 
-#navbar a{
-    text-decoration: none;
-    color: white;
+.container {
+  max-width: 115rem;
+  background: #F9F9F9;
+  border: 1px solid #E5E5E5;
 }
 
-#navbar a:link, #navbar a:visited{
+nav {
+  background-color: #4bcf7e;
+  margin: 0;
+  max-width: 115rem;
+  margin: 0 auto;
+  overflow: hidden;
+}
+
+nav ul {
+  margin: 0;
+  padding: 0;
+  display: flex;
+}
+
+nav ul li {
+  display: inline-block;
+  list-style-type: none;
+}
+
+nav ul li a {
+  color: white;
+}
+
+nav ul li:first-child {
+  margin-right: auto;
+}
+
+nav ul li a:link, nav ul li a:visited{
     padding: 16px 25px;
     text-align: center; 
     text-decoration: none;
     display: inline-block;   
 }
 
-#navbar a:hover, #navbar a:active {
+nav ul li a:hover, nav ul li a:active {
     background-color: white;
     color: #4bcf7e;
 }
@@ -168,13 +199,7 @@ body {
     position: absolute;
     margin-left: 490px;
     width: 700px;
-    height: 450px;
-}
-
-#menu {
-    cursor: pointer;
-    font-size: 1em;
-    text-decoration: none;
+    height: 400px;
 }
 
 /* -- FORM ORDER */
