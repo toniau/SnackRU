@@ -21,99 +21,95 @@
 	</head>
 
 	<body>
-        
-        <div id="navbar">
-            <div id="nav-links">
-                <a href="#">Logo</a>
-                <a href="#" id="dashTab">Snacker Dashboard</a>
-                <a href="#" id="fundraiserTab">Fundraiser</a>
-                <!--<a href="#" id="user">Hacker Name<i class="ion-ios-person-outline" id="user-icon"></i></a>-->
-            </div>
-        </div>
-        
-        <div id="snack-dash">
-            <h1 class="tab-header">Hello, welcome to your snacker dashboard, _____ (grab name here) !</h1>
-            
-            <!-- http://codepen.io/kh-mamun/pen/OpJKXR -->
-            <!-- Not functional yet, need to talk to QRU to implement javascript for this -->
-            <!-- Basically, every page refresh, go to database and grab hacker's list of snacks -->
-            <!-- Do calorie computation on this end -->
-            <!-- Unless we want to opt for local storage after first fetch -->
-            <div id="calorie-guage" class="card">
-                <h3>Calorie Intake</h3>
-                  <div class="guage-holder">    
-                    <div class="circle-mask">
-                      <div class="circle">
-                        <div class="circle-inner"></div> 
-                      </div>
-                    </div>
-                    <div class="percentage">0 %</div>
-                    <input type="text" class="text-box" />
-                    <div class="gauge-copy"></div>
-                  </div>
-            </div>
-            
-            <div id="meal-tracker" class="card">
-                <h3>Meal Tracker <a id="menu">(Menu)</a></h3>
-                <ul>
-                    <li>Current Meal: <span id="currMeal"></span></li>
-                    <li>Eligibility: <span id="canMeal"></span></li>
-                </ul>
-                <canvas id="myChart" height="130px;"></canvas>
-            </div>
-            
-            <div id="menu-layover">
-                <!-- Use PDF.js here to display Menu PDF -->
-            </div>
-            
-        </div>
+ 	 	<nav>
+ 	 		<ul>
+   	 		<li><a href="#" class="logo">Logo</a></li>
+   	 		<li><a href="#" id="dashTab">Snacker Dashboard</a></li>
+   	 		<li><a href="#" id="fundraiserTab">Fundraiser</a></li>
+   	 		<li><a href="#" id="menuTab">Menu</a></li>
+   	 		<li><a href="#" id="scheduleTab">Schedule</a></li>
+   	 		<!-- <li><a href="#" id="user">Hacker Name<i class="ion-ios-person-outline" id="user-icon"></i></a></li> -->
+   	 	</ul>
+ 	 	</nav>
+			   	 	
+    <div class="container">
+    		<div id="snack-dash">
+    		    <h1 class="tab-header">Hello, welcome to your snacker dashboard, _____ (grab name here) !</h1>
+    		    
+    		    <!-- http://codepen.io/kh-mamun/pen/OpJKXR -->
+    		    <!-- Not functional yet, need to talk to QRU to implement javascript for this -->
+    		    <!-- Basically, every page refresh, go to database and grab hacker's list of snacks -->
+    		    <!-- Do calorie computation on this end -->
+    		    <!-- Unless we want to opt for local storage after first fetch -->
+    		    <div id="calorie-guage" class="card">
+    		        <h3>Calorie Intake</h3>
+    		          <div class="guage-holder">    
+    		            <div class="circle-mask">
+    		              <div class="circle">
+    		                <div class="circle-inner"></div> 
+    		              </div>
+    		            </div>
+    		            <div class="percentage">0 %</div>
+    		            <input type="text" class="text-box" />
+    		            <div class="gauge-copy"></div>
+    		          </div>
+    		    </div>
+    		    
+    		    <div id="meal-tracker" class="card">
+    		        <h3>Meal Tracker</h3>
+    		        <canvas id="myChart" height="130px;"></canvas>
+    		    </div>
+    		    
+    		</div>
 
-        <div id="fundraiser">
-            <h1 class="tab-header">Happy Spring! SnackRU's Easter Fundraiser, <span style="color:black;"> ORDER HERE </style></span> <i class="ion-code-download"></i></h1>
-            
-            <div id="form-container">
-                <form id="order">
-                    <div class="form-group">
-                        <label for="firstname">First Name</label>
-                        <input type="text" class="form-control" id="firstname" placeholder="Jane">
-                    </div>
-                    <div class="form-group">
-                        <label for="lastname">Last Name</label>
-                        <input type="text" class="form-control" id="lastname" placeholder="Doe">
-                    </div>
-                    <div class="form-group">
-                        <label for="email">Email address</label>
-                        <input type="email" class="form-control" id="email" placeholder="JaneDoe@hackru.org">
-                    </div>
-                    <label>Cookie Flavors</label>
-                    <div class="radio">
-                        <label>
-                        <input type="radio" name="cookieOpt" id="vanilla" value="vanilla" checked> Vanilla
-                        </label>
-                    </div>
-                    <div class="radio">
-                      <label>
-                        <input type="radio" name="cookieOpt" id="chocolate" value="chocolate"> Chocoalte
-                      </label>
-                    </div>
-                    <div class="radio">
-                      <label>
-                        <input type="radio" name="cookieOpt" id="mint" value="mint"> Mint
-                      </label>
-                    </div>
-                    <div class="form-group">
-                        <label for="quantity">Quantity</label>
-                        <input type="number" class="form-control col-sm-2" id="quantity">
-                    </div>
-                    <br><br>
-                    <div class="form-group">
-                        <label class="checkbox-inline"> <input type="checkbox" id="mystery" value="mystery"> <strong>Mystery Egg ($5)</strong></label>
-                    </div>
-                    <br>
-                    <button type="submit" class="btn btn-default">Submit</button>
-                </form>
-            </div>
-        </div>
+    		<div id="fundraiser">
+    		    <h1 class="tab-header">Happy Spring! SnackRU's Easter Fundraiser, <span style="color:black;"> ORDER HERE </style></span> <i class="ion-code-download"></i></h1>
+    		    
+    		    <div id="form-container">
+    		        <form id="order">
+    		            <div class="form-group">
+    		                <label for="firstname">First Name</label>
+    		                <input type="text" class="form-control" id="firstname" placeholder="Jane">
+    		            </div>
+    		            <div class="form-group">
+    		                <label for="lastname">Last Name</label>
+    		                <input type="text" class="form-control" id="lastname" placeholder="Doe">
+    		            </div>
+    		            <div class="form-group">
+    		                <label for="email">Email address</label>
+    		                <input type="email" class="form-control" id="email" placeholder="JaneDoe@hackru.org">
+    		            </div>
+    		            <label>Cookie Flavors</label>
+    		            <div class="radio">
+    		                <label>
+    		                <input type="radio" name="cookieOpt" id="vanilla" value="vanilla" checked> Vanilla
+    		                </label>
+    		            </div>
+    		            <div class="radio">
+    		              <label>
+    		                <input type="radio" name="cookieOpt" id="chocolate" value="chocolate"> Chocoalte
+    		              </label>
+    		            </div>
+    		            <div class="radio">
+    		              <label>
+    		                <input type="radio" name="cookieOpt" id="mint" value="mint"> Mint
+    		              </label>
+    		            </div>
+    		            <div class="form-group">
+    		                <label for="quantity">Quantity</label>
+    		                <input type="number" class="form-control col-sm-2" id="quantity">
+    		            </div>
+    		            <br><br>
+    		            <div class="form-group">
+    		                <label class="checkbox-inline"> <input type="checkbox" id="mystery" value="mystery"> <strong>Mystery Egg ($5)</strong></label>
+    		            </div>
+    		            <br>
+    		            <button type="submit" class="btn btn-default">Submit</button>
+    		        </form>
+    		    </div>
+    		</div>
+    </div>
+        
         
 	</body>
     
