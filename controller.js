@@ -1,12 +1,12 @@
 $(document).ready(function(){
     document.getElementById("dashTab").addEventListener('click', function(){
-        $('#fundraiser').fadeToggle('fast');
-        $('#snack-dash').fadeToggle('fast');
+        $('#fundraiser').fadeOut('fast');
+        $('#snack-dash').fadeIn('fast');
     });
 
     document.getElementById("fundraiserTab").addEventListener('click', function(){
-        $('#snack-dash').fadeToggle('fast');
-        $('#fundraiser').fadeToggle('fast');
+        $('#snack-dash').fadeOut('fast');
+        $('#fundraiser').fadeIn('fast');
     });
     
     var ctx = document.getElementById("myChart");

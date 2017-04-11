@@ -23,12 +23,12 @@
 	<body>
  	 	<nav>
  	 		<ul>
-   	 		<li><a href="#" class="logo"><img src="img/logo.png" width="18px;" height="18px;" onmouseover="this.src='logo_green.png';" onmouseout="this.src='logo.png';"></a></li>
-   	 		<li><a href="#" id="dashTab">Snacker Dashboard</a></li>
-   	 		<li><a href="#" id="fundraiserTab">Fundraiser</a></li>
-   	 		<li><a href="#" id="menuTab">Menu</a></li>
-   	 		<li><a href="#" id="scheduleTab">Schedule</a></li>
-   	 	</ul>
+                <li><a href="#" class="logo" onhover="this.img.src='img/logo_green.png';"><img src="img/logo.png" width="18px;" height="18px;"></a></li>
+                <li><a href="#" id="dashTab">Snacker Dashboard</a></li>
+                <li><a href="#" id="fundraiserTab">Fundraiser</a></li>
+                <li><a href="#" id="menuTab">Menu</a></li>
+                <li><a href="#" id="scheduleTab">Schedule</a></li>
+   	 	  </ul>
  	 	</nav>
 			   	 	
     <div class="container">
@@ -62,21 +62,21 @@
     		</div>
 
     		<div id="fundraiser">
-    		    <h1 class="tab-header">Happy Spring! SnackRU's Easter Fundraiser, <span style="color:black;"> ORDER HERE </style></span> <i class="ion-code-download"></i></h1>
+    		    <h1 class="tab-header">Happy Spring! SnackRU's Easter Fundraiser, <span style="color:black;"> ORDER HERE </style></span></h1>
     		    
     		    <div id="form-container">
-    		        <form id="order">
+    		        <form id="order" action="https://formspree.io/food@hackru.org">
     		            <div class="form-group">
     		                <label for="firstname">First Name</label>
-    		                <input type="text" class="form-control" id="firstname" placeholder="Jane">
+    		                <input type="text" class="form-control" id="firstname" name="firstname" placeholder="Jane">
     		            </div>
     		            <div class="form-group">
     		                <label for="lastname">Last Name</label>
-    		                <input type="text" class="form-control" id="lastname" placeholder="Doe">
+    		                <input type="text" class="form-control" id="lastname" name="lastname" placeholder="Doe">
     		            </div>
     		            <div class="form-group">
     		                <label for="email">Email address</label>
-    		                <input type="email" class="form-control" id="email" placeholder="JaneDoe@hackru.org">
+    		                <input type="email" class="form-control" id="email" name="email" placeholder="JaneDoe@hackru.org">
     		            </div>
     		            <label>Cookie Flavors</label>
     		            <div class="radio">
